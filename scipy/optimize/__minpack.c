@@ -140,6 +140,8 @@ static const double dpmpar[3] = {
 void CHKDER(const int m, const int n, double* x, const double* fvec, const double* fjac,
             const int ldfjac, double* xp, const double* fvecp, const int mode, double* err)
 {
+    printf("_minpack.c CHKDER  \n");
+
     //     **********
     //
     //     subroutine chkder
@@ -289,7 +291,8 @@ void HYBRD(int(*fcn)(int* n, double* x, double* fvec, int* iflag), const int n,
            const int lr, double* qtf, double* wa1, double* wa2, double* wa3,
            double* wa4)
 {
-    printf("Hello, World!\n");
+    // printf("Hello, World!\n");
+    printf("_minpack.c HYBRD  \n");
     //     **********
     //
     //     subroutine hybrd
@@ -754,6 +757,8 @@ void HYBRJ(int(*fcn)(int* n, double* x, double* fvec, double* fjac, int* ldfjac,
            int* nfev, int* njev, double* r, const int ldr, double* qtf,
            double* wa1, double* wa2, double* wa3, double* wa4)
 {
+    printf("_minpack.c HYBRJ  \n");
+
     //     **********
     //
     //     subroutine hybrj
@@ -1208,6 +1213,8 @@ void LMDIF(int(*fcn)(int* m, int* n, double* x, double* fvec, int* iflag),
            int* info, int* nfev, double* fjac, const int ldfjac, int* ipvt,
            double* qtf, double* wa1, double* wa2, double* wa3, double* wa4)
 {
+    printf("_minpack.c LMDIF  \n");
+
     //     **********
     //
     //     subroutine lmdif
@@ -1681,6 +1688,8 @@ void LMDER(int(*fcn)(int* m, int* n,double* x, double* fvec, double* fjac,
            const int nprint, int* info, int* nfev, int* njev, int* ipvt,
            double* qtf, double* wa1, double* wa2, double* wa3, double* wa4)
 {
+    printf("_minpack.c LMDER  \n");
+
     //     **********
     //
     //     subroutine lmder
@@ -2141,6 +2150,8 @@ void LMSTR(int(*fcn)(int* m, int* n, double* x, double* fvec, double* wa3, int* 
            const int nprint, int* info, int* nfev, int* njev, int* ipvt, double* qtf,
            double* wa1, double* wa2, double* wa3, double* wa4)
 {
+    printf("_minpack.c LMSTR  \n");
+
     //     **********
     //
     //     subroutine lmstr
@@ -2618,6 +2629,8 @@ EXIT340:
 void dogleg(const int n, const double* r, const double* diag, const double* qtb,
             const double* delta, double* x, double* wa1, double* wa2)
 {
+    printf("_minpack.c dogleg  \n");
+
     //     **********
     //
     //     subroutine dogleg
@@ -2802,6 +2815,8 @@ void dogleg(const int n, const double* r, const double* diag, const double* qtb,
 
 double enorm(const int n, const double* x)
 {
+    printf("_minpack.c enorm  \n");
+
     //     **********
     //
     //     function enorm
@@ -2921,6 +2936,8 @@ void fdjac1(int(*fcn)(int* n, double* x, double* fvec, int* iflag), const int n,
             const double* fvec, double* fjac, const int ldfjac, int* iflag, const int ml,
             const int mu, const double epsfcn, double* wa1, double* wa2)
 {
+    printf("_minpack.c fdjac1  \n");
+
     //     **********
     //
     //     subroutine fdjac1
@@ -3076,6 +3093,8 @@ void fdjac2(int(*fcn)(int *m, int *n, double* x, double* fvec, int* iflag),
             double* fjac, const int ldfjac, int* iflag, const double epsfcn,
             double* wa)
 {
+    printf("_minpack.c fdjac2  \n");
+
     //     **********
     //
     //     subroutine fdjac2
@@ -3182,6 +3201,8 @@ void lmpar(const int n, double *r, const int ldr, const int* ipvt, const double*
            const double* qtb, const double delta, double* par, double* x, double* sdiag,
            double* wa1, double* wa2)
 {
+    printf("_minpack.c lmpar  \n");
+
     //     **********
     //
     //     subroutine lmpar
@@ -3464,6 +3485,8 @@ void lmpar(const int n, double *r, const int ldr, const int* ipvt, const double*
 
 void qform(const int m, const int n, double* q, const int ldq, double* wa)
 {
+    printf("_minpack.c qform  \n");
+
     //     **********
     //
     //     subroutine qform
@@ -3578,6 +3601,8 @@ void qform(const int m, const int n, double* q, const int ldq, double* wa)
 void qrfac(const int m, const int n, double* a, const int lda, const int pivot,
            int* ipvt, double* rdiag, double* acnorm, double* wa)
 {
+    printf("_minpack.c qrfac  \n");
+
     //     **********
     //
     //     subroutine qrfac
@@ -3770,6 +3795,8 @@ void qrsolv(const int n, double* r, const int ldr, const int* ipvt,
             const double* diag, const double* qtb, double* x,
             double* sdiag, double* wa)
 {
+    printf("_minpack.c qrsolv  \n");
+
     //     **********
     //
     //     subroutine qrsolv
@@ -3970,6 +3997,7 @@ void qrsolv(const int n, double* r, const int ldr, const int* ipvt,
 void r1mpyq(const int m, const int n, double* a, const int lda, const double* v,
             const double* w)
 {
+    printf("_minpack.c r1mpyq  \n");
     //     **********
     //
     //     subroutine r1mpyq
@@ -4067,6 +4095,8 @@ void r1mpyq(const int m, const int n, double* a, const int lda, const double* v,
 void r1updt(const int m, const int n, double* s, const double* u, double* v,
             double* w, int* sing)
 {
+    printf("_minpack.c r1updt  \n");
+
     //     **********
     //
     //     subroutine r1updt
@@ -4269,6 +4299,7 @@ void r1updt(const int m, const int n, double* s, const double* u, double* v,
 void rwupdt(const int n, double* r, const int ldr, const double* w, double* b,
             double* alpha, double* ccos, double* ssin)
 {
+     printf("_minpack.c rwupdt\n");
     //     **********
     //
     //     subroutine rwupdt

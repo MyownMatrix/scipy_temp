@@ -346,6 +346,7 @@ int jac_multipack_lm_function(int *m, int *n, double *x, double *fvec, double *f
 static char doc_hybrd[] = "[x,infodict,info] = _hybrd(fun, x0, args, full_output, xtol, maxfev, ml, mu, epsfcn, factor, diag)";
 
 static PyObject *minpack_hybrd(PyObject *dummy, PyObject *args) {
+  printf("_minpack.h_hybrd\n");
   PyObject *fcn, *x0, *extra_args = NULL, *o_diag = NULL;
   int      full_output = 0, maxfev = -10, ml = -10, mu = -10;
   double   xtol = 1.49012e-8, epsfcn = 0.0, factor = 1.0e2;
@@ -450,6 +451,7 @@ static PyObject *minpack_hybrd(PyObject *dummy, PyObject *args) {
 static char doc_hybrj[] = "[x,infodict,info] = _hybrj(fun, Dfun, x0, args, full_output, col_deriv, xtol, maxfev, factor, diag)";
 
 static PyObject *minpack_hybrj(PyObject *dummy, PyObject *args) {
+  printf("_minpack.h_hybrj \n");
   PyObject *fcn, *Dfun, *x0, *extra_args = NULL, *o_diag = NULL;
   int      full_output = 0, maxfev = -10, col_deriv = 1;
   double   xtol = 1.49012e-8, factor = 1.0e2;
@@ -554,6 +556,7 @@ static PyObject *minpack_hybrj(PyObject *dummy, PyObject *args) {
 static char doc_lmdif[] = "[x,infodict,info] = _lmdif(fun, x0, args, full_output, ftol, xtol, gtol, maxfev, epsfcn, factor, diag)";
 
 static PyObject *minpack_lmdif(PyObject *dummy, PyObject *args) {
+  printf("_minpack.h_lmdif\n");
   PyObject *fcn, *x0, *extra_args = NULL, *o_diag = NULL;
   int      full_output = 0, maxfev = -10;
   double   xtol = 1.49012e-8, ftol = 1.49012e-8;
@@ -653,6 +656,7 @@ static PyObject *minpack_lmdif(PyObject *dummy, PyObject *args) {
 static char doc_lmder[] = "[x,infodict,info] = _lmder(fun, Dfun, x0, args, full_output, col_deriv, ftol, xtol, gtol, maxfev, factor, diag)";
 
 static PyObject *minpack_lmder(PyObject *dummy, PyObject *args) {
+  printf("_minpack.h_lmder\n");
   PyObject *fcn, *x0, *Dfun, *extra_args = NULL, *o_diag = NULL;
   int      full_output = 0, maxfev = -10, col_deriv = 1;
   double   xtol = 1.49012e-8, ftol = 1.49012e-8;
@@ -755,6 +759,7 @@ static char doc_chkder[] = "_chkder(m,n,x,fvec,fjac,ldfjac,xp,fvecp,mode,err)";
 
 static PyObject *minpack_chkder(PyObject *self, PyObject *args)
 {
+  printf(" _minpack.h_chkder\n");
   PyArrayObject *ap_fvecp = NULL, *ap_fjac = NULL, *ap_err = NULL;
   PyArrayObject *ap_x = NULL, *ap_fvec = NULL, *ap_xp = NULL;
   PyObject *o_x, *o_fvec, *o_fjac, *o_fvecp;
