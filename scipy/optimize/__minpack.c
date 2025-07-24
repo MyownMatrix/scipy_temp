@@ -289,6 +289,7 @@ void HYBRD(int(*fcn)(int* n, double* x, double* fvec, int* iflag), const int n,
            const int lr, double* qtf, double* wa1, double* wa2, double* wa3,
            double* wa4)
 {
+    printf("Hello, World!\n");
     //     **********
     //
     //     subroutine hybrd
